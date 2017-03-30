@@ -1,0 +1,41 @@
+<h3 style="text-align: center">
+    DashBoard Works!
+</h3>
+
+<div style="text-align: center">
+  <table *ngIf="events" class="table table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: left"><button class="btn btn-default" >Previous</button></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th style="text-align: right"><button class="btn btn-default" >Next</button></th>
+      </tr>
+      <tr>
+        <th>ActivityId</th>
+        <th>CreatedBy</th>
+        <th>CreationDate</th>
+        <th>End</th>
+        <th>EventId</th>
+        <th>IsActive</th>
+        <th>Start</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of events; let i=index;"> 
+         <td>{{e.ActivityId}}</td>
+         <td>{{e.CreatedBy}}</td>
+         <td>{{e.CreationDate}}</td>
+         <td>{{e.End}}</td>
+         <td>{{e.EventId}}</td>
+         <td>{{e.IsActive}}</td>
+         <td>{{e.Start}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-default" (click)="printEvents()">Log Events</button>
+  <button class="btn btn-default" (click)="printToken()">Log Token</button>
+</div>

@@ -1,11 +1,28 @@
-<p>
-  {{title}}
-  <br>
-
-  <br>
-  <button (click)="getZenithToken()">GetToken</button>
-  <button (click)="getTest()">Print</button>
-
-  <button (click)="getEvents()">Get Events</button>
-  <button (click)="printEvents()">Print Events</button>
-</p>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" routerLink="/dashboard">ZenithClientSite</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/dashboard">Home</a></li>
+        <li><a routerLink="/dashboard">Events</a></li>
+        <li><a routerLink="/dashboard">Activities</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <!--<h1 style="text-align: center">{{title}}</h1>-->
+  <hr>
+  <router-outlet></router-outlet>
+</div>
